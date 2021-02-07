@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pizzaria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+<script src="main.js"></script>
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="#">Pizzaria</a>
+        <div class="topnav-right">
+         <a href="#viewblock">View Menu</a>
+         <a href="#addTopings">Add Menu</a>
+        </div>
+    </div>
+
+    <div class="row" id="viewblock">
+        <div  class="img_div"> 
+            <img class="img-responsive"  src="images/pizza.png">
+        </div>
+      <div id="menu" style="margin-top:200px">
+        <button class="btn btn-info" data-toggle="modal" data-target="#myModal2" onclick="showMenu()">Show Menu</button>
+
+        <div class="modal fade" id="myModal2" role="dialog">
+            <div class="modal-dialog">
+            
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                  <ol>
+                      <li id="cool">
+                  </ol>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="newRow" id="addTopings">
+        <div class="block1">
+            <input id="add_item" placeholder="Type here to add toppings"/></br>
+            <button id="add_toppings" data-toggle="modal" data-target="#myModal">Recommend a new Pizza</button>
+
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="spinner-grow text-primary"></div><button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Add Pizza</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input id="new_pizza_name" placeholder="Type pizza name here"/>
+                        <br>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-success" data-dismiss="modal" onclick="AddPizza()">Done</button>
+                      <div class="spinner-grow text-primary"></div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              
+            </div>
+        </div>
+        
+    </div>
+    <div>
+        <img class="img-responsive"  src="images/topping.png">
+    </div>
+</body>
+</html>
